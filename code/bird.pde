@@ -1,5 +1,5 @@
-float gravity = 0.7;
-float lift = -20;
+float gravity = 1;
+float lift = - 20;
 public float xb = 255;
 class bird {
   nn neural = new nn(5,9,2);
@@ -60,9 +60,9 @@ fitness =0;
   double[] input = {
   y/height,
   pipes[closeted_pipe()].top/height,
-  (pipes[closeted_pipe()].top+spacing)/height,
+  (pipes[closeted_pipe()].top + pipes[closeted_pipe()].spacing)/height,
   pipes[closeted_pipe()].x/width,
-  yspeed/10
+  yspeed/10,
   };
   
   
