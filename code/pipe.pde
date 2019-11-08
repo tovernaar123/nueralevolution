@@ -1,7 +1,8 @@
 public float w = 100;
-float spacing = 125;
+
 class pipe {
-  float top = random(height/2);
+  float spacing = 125;
+  float top = random(height-spacing);
   float x = width;
   float c = 255;
   

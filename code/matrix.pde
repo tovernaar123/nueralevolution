@@ -122,7 +122,9 @@ class matrix  {
       for (int y =0; y < matrix[0].length; y++) {
         String now = "";
         if(x == matrix.length-1 && y  == matrix[0].length-1) {
-        now = x+" "+y+": ";
+         int xr =x+1;
+         int yr = y+1;
+        now = xr+" "+yr+": ";
         }
         now +=  matrix[x][y];
         result[counter] = now;
@@ -181,7 +183,7 @@ matrix toMatrix(String data[]) {
       rowS += len[i];
     } else {
       
-      //println(rowS);
+      
       rows = int(rowS);
       counter++;
       break;
@@ -196,7 +198,7 @@ matrix toMatrix(String data[]) {
       nw += len[f]; 
       }
       data[data.length-1] = nw;
-      //println(columS);
+     
       colums = int(columS);  
       counter =0;
       break;
@@ -212,6 +214,6 @@ matrix toMatrix(String data[]) {
   
       }
     }
-  result.printm();
+  
   return result;
 }

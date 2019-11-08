@@ -22,6 +22,7 @@ weights_ih.random2d(-1,1);
 weights_ho.random2d(-1,1);
 bais_h.random2d(-1,1);
 bais_o.random2d(-1,1);
+
 }
 
 
@@ -129,13 +130,16 @@ return result;
 
 nn fromstring(String x) {
 String data[];
-data = loadStrings(x);
+
+data = loadStrings(x); 
+
+
 String ih[] = new String[0];
 String ho[] = new String[0];;
 String bh[] = new String[0];;
 String bo[] = new String[0];;
 int counter = 0;
-//printArray(data);
+
 for(int i=0; i < data.length; i++, counter++ ) {  
 
 if(!data[counter].equals("new")) {
@@ -182,14 +186,12 @@ matrix bor = toMatrix(bo);
 //weights_ho = new matrix(outputs_nodes,hidden_nodes);
 //bais_h = new matrix(hidden_nodes,1);
 //bais_o
-int h = ihr.matrix.length+1;
-int i = ihr.matrix[0].length+1;
-int o = hor.matrix.length+1;
-println(i);
-println(h);
-println(o);
+int h = ihr.matrix.length;
+int i = ihr.matrix[0].length;
+int o = hor.matrix.length;
+
 nn result = new nn(i,h,o);
-println(ihr.matrix[0].length);
+
 result.weights_ih = ihr;
 result.weights_ho = hor;
 result.bais_h     = bhr;
